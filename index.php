@@ -33,7 +33,18 @@ require_once('db.php');
 	</nav>
 </header>
 <body>
-	<button>Créer un Topic</button>
+	<?php
+	if(isset($_SESSION['id_user'])){
+	?>
+	<a href="./topic_create.php">Créer un Topic</a>
+	<?php
+	}
+	else{
+	?>
+	<p>Afin de créer un topic, veuillez vous <a href="./user.php">connectez</a>.</p>
+	<?php
+	}
+	?>
 	<section>
 		<?php
 		if(isset($_GET['category'])){

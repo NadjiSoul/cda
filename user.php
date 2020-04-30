@@ -71,7 +71,7 @@ else{
 }
 
 ?>
-
+		<h2>Inscription</h2>
 	    <form class="con_discon" method="POST" id="formb">
 	        <input type="text" name="email">
 	        <input type="password" name="password">
@@ -84,6 +84,7 @@ else{
 	    </form>
 
 	    	    <!-- CONNECTION -->
+	   	<h2>Connexion</h2>
 	    <form class="con_discon" method="POST" id="forma">
 	        <input type="text" name="username" placeholder="mail">
 	        <input type="password" name="password" placeholder="votre mot de passe...">

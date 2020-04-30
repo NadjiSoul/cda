@@ -15,15 +15,16 @@ while($s = mysqli_fetch_assoc($select)){
 if(isset($_POST['valid'])){
 	$title = $_POST['title'];
 	$user = $_SESSION['id_user'];
-	$label = $_POST['category']
-	$sql = "INSERT INTO Topic SET title = '$title', Category_id = (SELECT id FROM Category WHERE label = '$category'), User_id = (SELECT id FROM User WHERE id_user = $user)";
+	$category = $_POST['category'];
+	$sql = "INSERT INTO Topic SET title = '$title', Category_id = (SELECT id FROM Category WHERE label = '$category'), User_id = (SELECT id FROM User WHERE id = $user)";
     mysqli_query($cnx, $sql);
+    header('Location: index.php');
 }
 ?>
 
 <form method="POST">
-	<input type="" name="">
-	<select>
+	<input type="text" name="title">
+	<select name="category">
 		<?php
 		$sql = 'SELECT * FROM Category';
 		$select = mysqli_query($cnx, $sql);
