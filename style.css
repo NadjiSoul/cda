@@ -1,0 +1,64 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+header > nav {
+	background-color: #000;
+}
+
+header > nav > ul {
+	display: flex;
+}
+
+header > nav > ul > li {
+	color: #FFF;
+	padding: 20px 30px;
+	list-style: none;
+	cursor: pointer;
+}
+header > nav > ul > li > a{
+	text-decoration: none;
+	color: #FFF;
+}
+
+.connect{
+	background-color: blue;
+}
+.disconnect{
+	background-color: red;
+}
+#register_connection{
+	width: 80%;
+	margin:  10% auto;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+}
+#connection, #register{
+	width: 43%;
+	padding: 30px;
+	border-radius: 5px;
+	border: 2px solid grey;
+	margin:  0 auto;
+}
+#connection h2, #register h2{
+	text-align: center;
+}
+#connection form, #register form{
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+}
+#connection input, #register input{
+	padding: 5px;
+	margin: 2px;
+}
+
+#connection input[type=submit], #register input[type=submit]{
+	width: 100px;
+	padding: 10px;
+	background-color: blue;
+	border: none;
+}

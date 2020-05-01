@@ -6,10 +6,12 @@ require_once('db.php');
 <html>
 <head>
 	<title></title>
+	<link rel="stylesheet" type="text/css" href="./style.css">
 </head>
 <header>
 	<nav>
 		<ul>
+			<li><a href="./index.php">Home</a></li>
 			<?php 
 			$sql = 'SELECT * FROM Category';
 			$select = mysqli_query($cnx, $sql);
@@ -20,12 +22,12 @@ require_once('db.php');
 			}
 			if(isset($_SESSION['id_user'])){
 				?>
-			<li><a href="./disconnect.php">Se deconnecter</a></li>
+			<li class="disconnect"><a href="./disconnect.php">Se deconnecter</a></li>
 			<?php
 			}
 			else{
 			?>
-			<li><a href="./user.php">Se connecter</a></li>
+			<li class="connect"><a href="./user.php">Se connecter</a></li>
 			<?php
 			}
 			?>

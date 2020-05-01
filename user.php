@@ -71,22 +71,36 @@ else{
 }
 
 ?>
-		<h2>Inscription</h2>
-	    <form class="con_discon" method="POST" id="formb">
-	        <input type="text" name="email">
-	        <input type="password" name="password">
-	        <input type="password" name="pass">
-	        <div>
-	            <input type="checkbox" name="checkbox" required>
-	            <label for="checkbox">J'accepte les <a href="">Conditions Générales d'Utilisations</a></label>
-	        </div>
-	        <input type="submit" name="create">
-	    </form>
-
-	    	    <!-- CONNECTION -->
-	   	<h2>Connexion</h2>
-	    <form class="con_discon" method="POST" id="forma">
-	        <input type="text" name="username" placeholder="mail">
-	        <input type="password" name="password" placeholder="votre mot de passe...">
-	        <input type="submit" name="login">
-	    </form>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+	<main id="register_connection">
+		<section id="connection">
+		   	<!-- CONNECTION -->
+		   	<h2>Connexion</h2>
+		    <form class="con_discon" method="POST" id="forma">
+		        <input type="text" name="username" placeholder="mail">
+		        <input type="password" name="password" placeholder="votre mot de passe...">
+		        <input type="submit" name="login">
+		    </form>
+		</section>	
+		<section id="register">
+			<h2>Inscription</h2>
+		    <form class="con_discon" method="POST" id="formb">
+		        <input type="text" name="email">
+		        <input type="password" name="password">
+		        <input type="password" name="pass">
+		        <div>
+		            <input type="checkbox" name="checkbox" required>
+		            <label for="checkbox">J'accepte les <a href="">Conditions Générales d'Utilisations</a></label>
+		        </div>
+		        <input type="submit" name="create">
+		    </form>
+		</section>
+	</main>
+</body>
+</html>
