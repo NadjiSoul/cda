@@ -62,3 +62,52 @@ header > nav > ul > li > a{
 	background-color: blue;
 	border: none;
 }
+
+.post{
+	border: 2px solid black;
+	width: 30%;
+	padding: 10px;
+	margin: 5px 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+.post a,#post_create input[type=submit], #show article a, #button_topic{
+	background-color: red;
+	padding: 5px 10px;
+	color: #FFF;
+	border: none;
+	cursor: pointer;
+}
+
+#post_create{
+	width: 30%;
+	display: flex;
+	justify-content: space-between;
+}
+
+#post_create textarea{
+	width: 100%;
+	resize: none;
+}
+
+#post_create input[type=submit]{
+	background-color: blue;
+}
+#button_topic{
+	position: absolute;
+	background-color: orange;
+}
+#show{
+	margin-top: 3%;
+}
+#show article{
+	margin-left: 1%;
+	width: 98%;
+	padding: 10px 0;
+	border-bottom: 1px solid black;
+}
+
+#show article a{
+	background-color: grey;
+}

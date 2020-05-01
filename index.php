@@ -38,7 +38,7 @@ require_once('db.php');
 	<?php
 	if(isset($_SESSION['id_user'])){
 	?>
-	<a href="./topic_create.php">Créer un Topic</a>
+	<a id="button_topic" href="./topic_create.php">Créer un Topic</a>
 	<?php
 	}
 	else{
@@ -47,7 +47,7 @@ require_once('db.php');
 	<?php
 	}
 	?>
-	<section>
+	<section id="show">
 		<?php
 		if(isset($_GET['category'])){
 			$cat = $_GET['category'];
