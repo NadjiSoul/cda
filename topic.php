@@ -58,9 +58,10 @@ require_once('./db.php');
 			}
 		}
 		if(isset($_GET['delete'])){
+			$user = $_SESSION['id_user'];
 			$delete = $_GET['delete'];
 			$sql = "DELETE FROM Post WHERE id = $delete 
-			AND Topic_id = (SELECT id FROM Topic WHERE id = $user)
+			AND Topic_id = (SELECT id FROM Topic WHERE id = $topic)
 			AND User_id = (SELECT id FROM User WHERE id = $user)";
 			mysqli_query($cnx, $sql);
 			header('Location: topic.php?topic='.$topic);
