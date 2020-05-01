@@ -13,9 +13,9 @@ while($s = mysqli_fetch_assoc($select)){
 }
 */
 if(isset($_POST['valid'])){
-	$title = $_POST['title'];
+	$title = mysqli_real_escape_string($cnx, $_POST['title']);
 	$user = $_SESSION['id_user'];
-	$category = $_POST['category'];
+	$category = mysqli_real_escape_string($cnx, $_POST['category']);
 	$sql = "INSERT INTO Topic SET title = '$title', Category_id = (SELECT id FROM Category WHERE label = '$category'), User_id = (SELECT id FROM User WHERE id = $user)";
     mysqli_query($cnx, $sql);
     header('Location: index.php');
